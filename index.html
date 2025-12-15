@@ -1,1 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aurora Medical Center</title>
+
+    <style>
+        /* ----- Global Styles ----- */
+        body {
+            margin: 0;
+            font-family: "Segoe UI", Arial, sans-serif;
+            background: #f4f7fa;
+            color: #333;
+        }
+
+        a { text-decoration: none; }
+
+        /* ----- Header ----- */
+        header {
+            background: #0a4c75;
+            color: white;
+            padding: 18px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 28px;
+            letter-spacing: 1px;
+        }
+
+        nav a {
+            color: white;
+            margin-left: 30px;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        nav a:hover {
+            opacity: 0.75;
+        }
+
+        /* ----- Hero Section ----- */
+        .hero {
+            position: relative;
+            background: url("https://images.unsplash.com/photo-1586773860418-d37222d8fce3") center/cover no-repeat;
+            height: 420px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(10, 76, 117, 0.55);
+        }
+
+        .hero-text {
+            position: relative;
+            color: white;
+            text-align: center;
+            z-index: 2;
+            max-width: 700px;
+        }
+
+        .hero-text h2 {
+            font-size: 42px;
+            margin-bottom: 10px;
+            animation: fadeIn 1.5s ease forwards;
+        }
+
+        .hero-text p {
+            font-size: 18px;
+            opacity: 0.95;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(15px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ----- Section Divider Curve ----- */
+        .curve {
+            margin-top: -60px;
+            width: 100%;
+        }
+
+        /* ----- Services Section ----- */
+        .section-title {
+            text-align: center;
+            margin: 40px 0 10px;
+            font-size: 32px;
+            color: #0a4c75;
+            letter-spacing: 1px;
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+            padding: 30px 50px 60px;
+        }
+
+        .service-box {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+        }
+
+        .service-box h3 {
+            margin: 0 0 8px;
+            color: #0a4c75;
+        }
+
+        /* ----- About Section ----- */
+        .about {
+            background: #e9f3fb;
+            padding: 60px 50px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .about img {
+            width: 330px;
+            border-radius: 12px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+        }
+
+        .about-text {
+            max-width: 500px;
+        }
+
+        .about-text h2 {
+            margin-top: 0;
+            color: #0a4c75;
+            font-size: 30px;
+        }
+
+        /* ----- Footer ----- */
+        footer {
+            background: #0a4c75;
+            color: white;
+            text-align: center;
+            padding: 18px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <h1>Aurora Medical Center</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Departments</a>
+            <a href="#">Doctors</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <div class="hero">
+        <div class="overlay"></div>
+        <div class="hero-text">
+            <h2>Where Compassion Meets Innovation</h2>
+            <p>Providing world-class healthcare with dedication, expertise, and cutting-edge technology.</p>
+        </div>
+    </div>
+
+    <!-- CURVED DIVIDER -->
+    <svg class="curve" viewBox="0 0 1440 120">
+        <path fill="#f4f7fa" d="M0,96L1440,0L1440,120L0,120Z"></path>
+    </svg>
+
+    <!-- SERVICES -->
+    <h2 class="section-title">Our Specialties</h2>
+
+    <div class="services">
+        <div class="service-box">
+            <h3>Emergency & Trauma</h3>
+            <p>Rapid response teams equipped with advanced life-saving facilities.</p>
+        </div>
+
+        <div class="service-box">
+            <h3>Heart & Cardiology</h3>
+            <p>Modern cardiovascular solutions from diagnosis to surgery.</p>
+        </div>
+
+        <div class="service-box">
+            <h3>Maternity Care</h3>
+            <p>Compassionate prenatal, delivery, and postnatal care.</p>
+        </div>
+
+        <div class="service-box">
+            <h3>Diagnostics & Lab</h3>
+            <p>Accurate, fast medical testing using state-of-the-art machines.</p>
+        </div>
+    </div>
+
+    <!-- ABOUT SECTION -->
+    <section class="about">
+        <img src="https://images.unsplash.com/photo-1600959907703-28ce4428d34f" alt="Hospital">
+        <div class="about-text">
+            <h2>About Aurora</h2>
+            <p>
+                At Aurora Medical Center, we believe healthcare should be both 
+                humane and technologically advanced. Our specialists work 
+                collaboratively to provide comprehensive medical solutions while ensuring 
+                comfort, dignity, and safety.
+            </p>
+            <p>
+                With over 20 departments and internationally certified doctors, we 
+                deliver excellence you can trust.
+            </p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        © 2025 Aurora Medical Center — Caring for Life.
+    </footer>
+
+</body>
+</html>
 
