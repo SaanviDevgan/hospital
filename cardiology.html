@@ -3,19 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Cardiology | Aurora Medical Center</title>
+    <title>Emergency Medicine | Aurora Medical Center</title>
 
     <style>
-        body {
+        * {
             margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
             font-family: "Segoe UI", Arial, sans-serif;
             background: #f4f7fa;
             color: #333;
+            line-height: 1.6;
         }
 
-        a { text-decoration: none; }
+        a {
+            text-decoration: none;
+        }
 
-     
+        
         header {
             background: #0a4c75;
             color: white;
@@ -23,21 +31,28 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            position: sticky;
             top: 0;
-            z-index: 100;
+            z-index: 1000;
+            flex-wrap: wrap;
         }
 
         header h1 {
-            margin: 0;
             font-size: 28px;
             letter-spacing: 1px;
         }
 
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
         nav a {
             color: white;
-            margin-left: 30px;
             font-size: 16px;
             font-weight: 600;
+            transition: opacity 0.3s ease;
         }
 
         nav a:hover {
@@ -48,10 +63,11 @@
         .hero {
             position: relative;
             height: 320px;
-            background: url("https://images.unsplash.com/photo-1580281657521-4c6c3f2e0e3a") center/cover no-repeat;
+            background: url("https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1400&q=80") center/cover no-repeat;
             display: flex;
             align-items: center;
             justify-content: center;
+            text-align: center;
         }
 
         .hero::after {
@@ -63,8 +79,8 @@
 
         .hero-text {
             position: relative;
+            z-index: 1;
             color: white;
-            text-align: center;
             max-width: 750px;
             padding: 0 20px;
         }
@@ -110,16 +126,17 @@
             background: white;
             padding: 25px;
             border-radius: 12px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-            transition: transform 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .highlight-box:hover {
             transform: translateY(-5px);
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
         }
 
         .highlight-box h4 {
-            margin-top: 0;
+            margin-bottom: 10px;
             color: #0a4c75;
         }
 
@@ -156,12 +173,43 @@
             background: #e1eef7;
         }
 
-        
+       
         footer {
-            background: #0a4c75;
+            background: #083a59;
             color: white;
             text-align: center;
             padding: 18px;
+            font-size: 14px;
+        }
+
+       
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+                padding: 20px;
+            }
+
+            .hero {
+                height: 260px;
+            }
+
+            .hero-text h2 {
+                font-size: 30px;
+            }
+
+            .hero-text p {
+                font-size: 16px;
+            }
+
+            .section {
+                padding: 40px 20px;
+            }
+
+            .cta h3 {
+                font-size: 24px;
+            }
         }
     </style>
 </head>
@@ -170,6 +218,7 @@
 
     <header>
         <h1>Aurora Medical Center</h1>
+
         <nav>
             <a href="index.html">Home</a>
             <a href="departments.html">Departments</a>
@@ -178,54 +227,65 @@
         </nav>
     </header>
 
-   
     <section class="hero">
         <div class="hero-text">
             <h2>Emergency Medicine</h2>
-            <p>Immediate, life-saving care when every second matters</p>
+            <p>Immediate, life-saving care when every second matters.</p>
         </div>
     </section>
 
-    
     <section class="section">
         <h3>About the Department</h3>
+
         <p>
-        write abput the department like you did foor the emergency medicine one, okay? ilysm saanvi  
+            ......
         </p>
 
         <div class="highlights">
+
             <div class="highlight-box">
-                <h4>-------</h4>
-                <p>---------</p>
+                <h4>2......e</h4>
+                <p>
+                    F......
+                </p>
             </div>
 
             <div class="highlight-box">
-                <h4>titles</h4>
-                <p>cardiology</p>
+                <h4>R......</h4>
+                <p>
+                    H......
+                </p>
             </div>
 
             <div class="highlight-box">
-                <h4>---</h4>
-                <p>-----</p>
+                <h4>......</h4>
+                <p>
+                    ......
+                </p>
             </div>
 
             <div class="highlight-box">
-                <h4>cardiology</h4>
-                <p>-----</p>
+                <h4>......</h4>
+                <p>
+                    ......
+                </p>
             </div>
+
         </div>
     </section>
 
-    
     <section class="cta">
         <h3>Need Immediate Assistance?</h3>
-        <p>If you are experiencing a medical emergency, seek help immediately.</p>
-        <a href="#">Contact Emergency Services</a>
+
+        <p>
+            If you are experiencing a medical emergency, seek help immediately.
+        </p>
+
+        <a href="tel:911">Contact Emergency Services</a>
     </section>
 
-   
     <footer>
-        © 2025 Aurora Medical Center — Emergency Care You Can Trust.
+        &copy; 2025 Aurora Medical Center — Emergency Care You Can Trust.
     </footer>
 
 </body>
